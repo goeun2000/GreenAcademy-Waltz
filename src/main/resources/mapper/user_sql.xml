@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+
+   <select id="selectByEmail"
+      resultType="com.kkanbu.waltz.vo.UserVO">
+        <![CDATA[
+          SELECT
+              MEM_EMAIL,
+              MEM_NAME
+          FROM
+              MEMBER_TBL
+          WHERE
+              MEM_EMAIL = #{email}       
+      ]]>
+   </select>
+
+   <select id="selectById" resultType="com.kkanbu.waltz.vo.UserVO">
+        <![CDATA[
+          SELECT
+              *
+          FROM
+              MEMBER_TBL
+          WHERE
+              MEM_ID = #{id}  
+      ]]>
+   </select>
+
+   <!-- 내가 쓴 글 -->
+   <select id="myPost" resultType="com.kkanbu.waltz.vo.UserVO">
+      SELECT
+      M.MEM_ID, P.BO_NUM, P.PO_TITLE, P.PO_DATE, P.PO_CLICKS
+      FROM
+      MEMBER_TBL M LEFT OUTER JOIN POST_TBL P
+      ON M.MEM_ID = P.MEM_ID
+      WHERE
+      M.MEM_ID = #{MEM_ID}
+   </select>
+
+   <!-- 회원목록 -->
+   <select id="userList" resultType="com.kkanbu.waltz.vo.UserVO">
+      SELECT
+      MEM_ID,
+      MEM_NAME,
+      MEM_EMAIL
+      FROM
+      MEMBER_TBL
+      WHERE
+      MEM_MANAGER='0'
+   </select>
+
+   <!-- 로그인 -->
+   <select id="login" resultType="com.kkanbu.waltz.vo.UserVO">
+      SELECT MEM_ID, MEM_PW
+      FROM MEMBER_TBL
+      WHERE MEM_ID = #{MEM_ID}
+      <!-- AND MEM_PW = #{MEM_PW} -->
+   </select>
+
+   <!-- 회원탈퇴 -->
+   <delete id="delete">
+      DELETE FROM MEMBER_TBL
+      WHERE MEM_ID = #{MEM_ID}
+      <!-- AND MEM_PW = #{MEM_PW} -->
+   </delete>
+
+   <!-- 회원정보 수정 -->
+   <update id="update">
+      UPDATE MEMBER_TBL SET
+      MEM_NAME = #{MEM_NAME},
+      MEM_PW =
+      #{MEM_PW},
+      MEM_PHONE = #{MEM_PHONE},
+      MEM_ADDRESS = #{MEM_ADDRESS},
+      MEM_DETAILADDRESS = #{MEM_DETAILADDRESS}
+      WHERE
+      MEM_ID = #{MEM_ID}
+   </update>
+
+   <!-- 패스워드 체크 -->
+   <select id="passChk" resultType="int">
+      SELECT COUNT(*) FROM MEMBER_TBL
+      WHERE MEM_ID = #{MEM_ID}
+      AND MEM_PW = #{MEM_PW}
+   </select>
+
+   <!-- 아이디 중복 체크 -->
+   <select id="idChk" resultType="int">
+      SELECT COUNT(*) FROM MEMBER_TBL
+      WHERE MEM_ID = #{MEM_ID}
+   </select>
+
+   <insert id="register">
+        <![CDATA[
+            INSERT INTO MEMBER_TBL
+            (
+                MEM_ID,
+                MEM_PW,
+                MEM_NAME,
+                MEM_EMAIL,
+                MEM_PHONE,
+                MEM_ADDRESS,
+                MEM_DETAILADDRESS,
+                MEM_MANAGER
+            )
+            VALUES
+            (
+                #{id},
+                #{password},
+                #{name},
+                #{email},
+                #{phone},
+                #{address},
+                #{detailAddress},
+                '0'
+            )
+        ]]>
+   </insert>
+
+   <insert id="petRegister">
+        <![CDATA[
+            INSERT INTO ANIMAL_TBL
+            (
+                ANI_NUM,
+                MEM_ID,
+                ANI_NAME,
+                ANI_KIND,
+                ANI_TYPE,
+                ANI_GENDER,
+                ANI_AGE,
+                ANI_WEIGHT,
+                ANI_FILENAME,
+                ANI_UPLOADPATH,
+                ANI_UUID,
+                ANI_NEUTERING,
+                ANI_MEDICALHIS
+            )
+            VALUES
+            (
+                ANIMAL_SEQ.NEXTVAL,
+                #{MEM_ID},
+                #{ANI_NAME},
+                #{ANI_KIND},
+                #{ANI_TYPE},
+                #{ANI_GENDER},
+                #{ANI_AGE},
+                #{ANI_WEIGHT},
+                #{ANI_FILENAME},
+                #{ANI_UPLOADPATH},
+                #{ANI_UUID},
+                #{ANI_NEUTERING},
+                #{ANI_MEDICALHIS}
+            )
+        ]]>
+   </insert>
+
+   <select id="myPet" resultType="com.kkanbu.waltz.vo.petVO">
+      SELECT
+      ANI_FILENAME,
+      ANI_UPLOADPATH,
+      ANI_UUID,
+      ANI_NAME,
+      ANI_GENDER,
+      ANI_KIND,
+      ANI_TYPE,
+      ANI_NEUTERING,
+      ANI_WEIGHT,
+      ANI_MEDICALHIS
+      FROM
+      ANIMAL_TBL
+      WHERE
+      MEM_ID=#{MEM_ID}
+   </select>
+
+   <!-- 생성된 메일 인증키 업데이트 -->
+   <update id="createAuthkey">
+      UPDATE MEMBER_TBL set MEM_AUTHKEY = #{authkey} WHERE MEM_EMAIL = #{email}
+   </update>
+
+
+   <!-- authstatus 컬럼을 0 에서 1로 업데이트 -->
+   <update id="updateAuthstatus">
+      UPDATE MEMBER_TBL set MEM_AUTHSTATUS = 'Y' WHERE MEM_EMAIL = #{email}
+   </update>
+
+</mapper>
