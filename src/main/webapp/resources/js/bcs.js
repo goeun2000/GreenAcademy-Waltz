@@ -1,5 +1,4 @@
 function dogselect1 () {
-
     let dog1 = document.getElementById("dog1");
     let dog2 = document.getElementById("dog2");
     let dog3 = document.getElementById("dog3");
@@ -14,23 +13,18 @@ function dogselect1 () {
         dog3.style.opacity = '55%';
         dog4.style.opacity = '55%';
         dog5.style.opacity = '55%';
-        
     }
 
     let result_text1 = document.getElementById("result_text1");
-
     result_text1.innerHTML = "훨씬 더 많이 밥을 줘도 괜찮아요.";
-
 }
 
 function dogselect2 () {
-
     let dog1 = document.getElementById("dog1");
     let dog2 = document.getElementById("dog2");
     let dog3 = document.getElementById("dog3");
     let dog4 = document.getElementById("dog4");
     let dog5 = document.getElementById("dog5");
-
 
     if(dog2.style.display = 'none') {
         dog2.style.display = 'inline-flex';
@@ -43,18 +37,15 @@ function dogselect2 () {
     }
 
     let result_text1 = document.getElementById("result_text1");
-
     result_text1.innerHTML = "조금 더 많이 밥을 줘도 괜찮아요.";
 }
 
 function dogselect3 () {
-
     let dog1 = document.getElementById("dog1");
     let dog2 = document.getElementById("dog2");
     let dog3 = document.getElementById("dog3");
     let dog4 = document.getElementById("dog4");
     let dog5 = document.getElementById("dog5");
-
 
     if(dog3.style.display = 'none') {
         dog3.style.display = 'inline-flex';
@@ -67,7 +58,6 @@ function dogselect3 () {
     }
 
     let result_text1 = document.getElementById("result_text1");
-
     result_text1.innerHTML = "적정 체중이네요. 아주 좋아요!";
 }
 
@@ -78,7 +68,6 @@ function dogselect4 () {
     let dog3 = document.getElementById("dog3");
     let dog4 = document.getElementById("dog4");
     let dog5 = document.getElementById("dog5");
-
 
     if(dog4.style.display = 'none') {
         dog4.style.display = 'inline-flex';
@@ -91,7 +80,6 @@ function dogselect4 () {
     }
 
     let result_text1 = document.getElementById("result_text1");
-
     result_text1.innerHTML = "살짝 비만이 걱정됩니다. 관리해주세요.";
 }
 
@@ -102,7 +90,6 @@ function dogselect5 () {
     let dog3 = document.getElementById("dog3");
     let dog4 = document.getElementById("dog4");
     let dog5 = document.getElementById("dog5");
-
 
     if(dog5.style.display = 'none') {
         dog5.style.display = 'inline-flex';
@@ -115,7 +102,6 @@ function dogselect5 () {
     }
 
     let result_text1 = document.getElementById("result_text1");
-
     result_text1.innerHTML = "비만이 걱정됩니다. <br> 먹는 양을 조절하고 많이 움직이게 해주세요.";
 }
 
@@ -138,7 +124,6 @@ function catselect1 () {
     }
 
     let result_text2 = document.getElementById("result_text2");
-
     result_text2.innerHTML = "훨씬 더 많이 밥을 줘도 괜찮아요.";
 }
 
@@ -161,7 +146,6 @@ function catselect2 () {
     }
 
     let result_text2 = document.getElementById("result_text2");
-
     result_text2.innerHTML = "조금 더 많이 밥을 줘도 괜찮아요.";
 }
 
@@ -184,7 +168,6 @@ function catselect3 () {
     }
 
     let result_text2 = document.getElementById("result_text2");
-
     result_text2.innerHTML = "적정 체중이네요. 아주 좋아요!";
 }
 
@@ -207,7 +190,6 @@ function catselect4 () {
     }
 
     let result_text2 = document.getElementById("result_text2");
-
     result_text2.innerHTML = "살짝 비만이 걱정됩니다. 관리해주세요.";
 }
 
@@ -230,7 +212,6 @@ function catselect5 () {
     }
 
     let result_text2 = document.getElementById("result_text2");
-
     result_text2.innerHTML = "비만이 걱정됩니다. <br> 먹는 양을 조절하고 많이 움직이게 해주세요.";
 }
 

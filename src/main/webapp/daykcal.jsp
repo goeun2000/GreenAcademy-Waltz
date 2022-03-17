@@ -82,61 +82,52 @@
             
               
                 
-<c:catch>
-    <c:choose>
-        <c:when test="${empty authInfo }">
-        <ul id="personal">
-        
-            <li>
-                 <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
-             </li>
-             <li>
-                 <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
-             </li>
-         </ul>   
-        </c:when>
-        <c:otherwise>
-            <c:choose>
-            
-            
-                <c:when test="${authInfo.manager eq '1' }">
-                <ul id="personal" style="margin-left:780px; margin-top:-52px;">
-            
-		            <li style="font-size:13px; margin-right:20px; margin-top:2px;">
-		            	관리자 ${authInfo.name }
-		            </li>
-	            		<%-- <h5>관리자 ${authInfo.name }님, 환영합니다.</h5> --%>
-	                  
-	                 <li>
-	                       <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
-	                 </li>                    
-	                 <li>
-	                       <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
-	                 </li>
-	       
-	            </ul>
-                </c:when>
-                <c:otherwise>
-                <ul id="personal" style="margin-left:800px;">
-            
-			            <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
-			            	${authInfo.name }님
-			            </li>
+            <c:catch>
+                <c:choose>
+                    <c:when test="${empty authInfo }">
+                    <ul id="personal">
+                        <li>
+                             <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
+                         </li>
+                         <li>
+                             <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
+                         </li>
+                     </ul>
+                    </c:when>
+                    <c:otherwise>
+                        <c:choose>
+                            <c:when test="${authInfo.manager eq '1' }">
+                            <ul id="personal" style="margin-left:780px; margin-top:-52px;">
 
-                      <li>
-                          <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
-                      </li>
-                      <li>
-                           <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
-                      </li>
-                      
-                 </ul>     
-                      
-                </c:otherwise>
-            </c:choose>
-        </c:otherwise>
-    </c:choose>
-</c:catch>
+                                <li style="font-size:13px; margin-right:20px; margin-top:2px;">
+                                    관리자 ${authInfo.name }
+                                </li>
+                                 <li>
+                                       <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
+                                 </li>
+                                 <li>
+                                       <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                 </li>
+                            </ul>
+                            </c:when>
+                            <c:otherwise>
+                            <ul id="personal" style="margin-left:800px;">
+                                <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
+                                        ${authInfo.name }님
+                                </li>
+                                <li>
+                                    <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                </li>
+                                <li>
+                                    <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
+                                </li>
+                             </ul>
+
+                            </c:otherwise>
+                        </c:choose>
+                    </c:otherwise>
+                </c:choose>
+            </c:catch>
                 
             
         </nav>
@@ -161,73 +152,57 @@
                 
             
             <div id="age_box1">
-                
-                
-                    <p>몸무게를 입력하세요.</p>
-                    <div id="weight_input">
-                        <input type="text" class="date" id="weight1"  value="" placeholder="kg"  >
-                    </div>
-                    <div id="dog_type">
-                        <p>유형을 선택하세요.</p> 
-                    </div>
-                    <div>
-                        <select name="type1" id="type1">
-                            <option value="1">중성화 한 강아지</option>
-                            <option value="2">중성화하지 않은 강아지</option>
-                            <option value="3">움직임이 거의 없고 비만인 강아지</option>
-                            <option value="4">활동량이 많은 강아지</option>
-                            <option value="5">0~4개월 강아지</option>
-                        </select>
-                    </div>
-                        <div id="cal_button">
-                            <input type="button" class="cal"  value="결과보기" id=""  onclick="getKcal1()">
-                        </div>
-                    <div id="result">
-                        <p>강아지의 하루 권장 칼로리는 <span id="daysPast1">????</span>kcal 입니다. </p>
-                    </div>
-                
-                <div id="age_box2">   
-                   
-                        <p>몸무게를 입력하세요.</p>
-                        <div id="date_input">
-                            <input type="text" class="date" id="weight2" value="" placeholder="kg" >
-                        </div>
-                        <div id="cat_type">
-                            <p>유형을 선택하세요.</p> 
-                        </div>
-                        <div >
-                            <select name="type2" id="type2">
-                                <option value="1">4개월 미만의 어린 고양이</option>
-                                <option value="2">4~6개월의 성장 중인 어린 고양이</option>
-                                <option value="3">7~12개월의 성장 중인 어린 고양이</option>
-                                <option value="4">중성화 하지 않은 성묘</option>
-                                <option value="5">중성화 한 성묘</option>
-                                <option value="6">운동량이 많고 활발한 성묘</option>
-                                <option value="7">체중 감량이 필요한 성묘</option>
-                            </select>
-                        </div>
-                        <div id="cal_button">
-                            <input type="button" class="cal"  value="결과보기" id="" onclick="getKcal2()">
-                        </div>
-                        <div id="result">
-                            <p id="cat_result">고양이의 하루 권장 칼로리는 <span id="daysPast2">????</span>kcal 입니다. </p>
-                        </div>
-                       
+                <p>몸무게를 입력하세요.</p>
+                <div id="weight_input">
+                    <input type="text" class="date" id="weight1"  value="" placeholder="kg"  >
+                </div>
+                <div id="dog_type">
+                    <p>유형을 선택하세요.</p>
+                </div>
+                <div>
+                    <select name="type1" id="type1">
+                        <option value="1">중성화 한 강아지</option>
+                        <option value="2">중성화하지 않은 강아지</option>
+                        <option value="3">움직임이 거의 없고 비만인 강아지</option>
+                        <option value="4">활동량이 많은 강아지</option>
+                        <option value="5">0~4개월 강아지</option>
+                    </select>
+                </div>
+                <div id="cal_button">
+                    <input type="button" class="cal"  value="결과보기" id=""  onclick="getKcal1()">
+                </div>
+                <div id="result">
+                    <p>강아지의 하루 권장 칼로리는 <span id="daysPast1">????</span>kcal 입니다. </p>
                 </div>
                 
-            
-            
-        </div>
+                <div id="age_box2">
+                    <p>몸무게를 입력하세요.</p>
+                    <div id="date_input">
+                        <input type="text" class="date" id="weight2" value="" placeholder="kg" >
+                    </div>
+                    <div id="cat_type">
+                        <p>유형을 선택하세요.</p>
+                    </div>
+                    <div>
+                        <select name="type2" id="type2">
+                            <option value="1">4개월 미만의 어린 고양이</option>
+                            <option value="2">4~6개월의 성장 중인 어린 고양이</option>
+                            <option value="3">7~12개월의 성장 중인 어린 고양이</option>
+                            <option value="4">중성화 하지 않은 성묘</option>
+                            <option value="5">중성화 한 성묘</option>
+                            <option value="6">운동량이 많고 활발한 성묘</option>
+                            <option value="7">체중 감량이 필요한 성묘</option>
+                        </select>
+                    </div>
+                    <div id="cal_button">
+                        <input type="button" class="cal"  value="결과보기" id="" onclick="getKcal2()">
+                    </div>
+                    <div id="result">
+                        <p id="cat_result">고양이의 하루 권장 칼로리는 <span id="daysPast2">????</span>kcal 입니다. </p>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-
-
-
-
-
-        
         <div id="copyright">
             <div id="copyright_box">
                 <div id="copyright_left">
@@ -253,8 +228,8 @@
                     </div>
                 </div>     
             </div>
-        <hr id="copyright_line">
-        <p id="copyright_last">Copyright (c) Waltz 2021, All Rights Reserved</p>
+            <hr id="copyright_line">
+            <p id="copyright_last">Copyright (c) Waltz 2021, All Rights Reserved</p>
         </div>
         
         <div id="kakao">
@@ -262,16 +237,8 @@
             <div>
                 <img src="resources/images/up2.png" style="cursor: pointer;" alt="" id="up" onclick="window.scrollTo(0,0);">
             </div>
-            
         </div>
-
     </section>
-
-    
-
-   
-    
-    
     <script src="resources/js/daykcal.js"  charset="UTF-8"></script>
 </body>
 </html>

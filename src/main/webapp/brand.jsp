@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<header>
+    <header>
         <nav id="header_container">
             <ul id="menubar">
                 <li>
@@ -79,70 +79,52 @@
                     </div> 
                 </li>
             </ul>
-          
-                
+
 			<c:catch>
 			    <c:choose>
 			        <c:when test="${empty authInfo }">
-			        <ul id="personal" >
-			            <li>
-			                 <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
-			             </li>
-			             <li>
-			                 <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
-			             </li>
-			        </ul>
-			             
+                        <ul id="personal" >
+                            <li>
+                                 <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
+                             </li>
+                             <li>
+                                 <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
+                             </li>
+                        </ul>
 			        </c:when>
 			        <c:otherwise>
 			            <c:choose>
 			                <c:when test="${authInfo.manager eq '1' }">
-			                
-			                
-			                <ul id="personal" style="margin-left:780px;">
-			            
-					            <li style="font-size:13px; margin-right:20px; margin-top:2px;">
-					            	관리자 ${authInfo.name }
-					            </li>
-				            		<%-- <h5>관리자 ${authInfo.name }님, 환영합니다.</h5> --%>
-				                  
-				                 <li>
-				                       <a href="/list"><i class="fa fa-sign-out"></i> 회원목록</a>
-				                 </li>                    
-				                 <li>
-				                       <a href="/logout"><i class="fa fa-sign-out"></i> 로그아웃</a>
-				                 </li>
-				       
-				            </ul>
-				            
+                                <ul id="personal" style="margin-left:780px;">
+                                    <li style="font-size:13px; margin-right:20px; margin-top:2px;">
+                                        관리자 ${authInfo.name }
+                                    </li>
+                                    <li>
+                                        <a href="/list"><i class="fa fa-sign-out"></i> 회원목록</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout"><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                    </li>
+                                </ul>
 			                </c:when>
-			                
-			                
-			                
 			                <c:otherwise>
-			                <ul id="personal" style="margin-left:800px;">
-			            
-						            <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
-						            	${authInfo.name }님
-						            </li>
-			
-			                      <li>
-			                          <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
-			                      </li>
-			                      <li>
-			                           <a href="/myPost"> 마이페이지</a>
-			                      </li>
-			                      
-			                     </ul> 
+                                <ul id="personal" style="margin-left:800px;">
+                                    <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
+                                            ${authInfo.name }님
+                                    </li>
+                                    <li>
+                                        <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                    </li>
+                                    <li>
+                                        <a href="/myPost"> 마이페이지</a>
+                                    </li>
+
+                                </ul>
 			                </c:otherwise>
 			            </c:choose>
 			        </c:otherwise>
 			    </c:choose>
 			</c:catch>
-                
-                
-                
-            
         </nav>
     </header>
     <div id="header_back">
@@ -254,8 +236,6 @@
             <hr id="copyright_line">
             <p id="copyright_last">Copyright (c) Waltz 2021, All Rights Reserved</p>
             </div>
-            
-            
     </section>   
 
     <div id="kakao">
@@ -263,9 +243,6 @@
         <div>
             <img src="resources/images/up2.png" style="cursor: pointer;" alt="" id="up" onclick="window.scrollTo(0,0);">
         </div>
-        
-    </div>    
-
-
+    </div>
 </body>
 </html>

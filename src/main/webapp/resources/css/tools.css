@@ -11,7 +11,6 @@ header {
     background-color: white;
     border-bottom: 1px solid skyblue;
     z-index: 3;
-    
 }
 
 #header_container {
@@ -22,8 +21,6 @@ header {
     padding-left: -10px;
     margin-left: 210px;
     width: 1050px;
-    
-
 }
 
 #header_container ul {
@@ -37,9 +34,7 @@ header {
 
 #menubar {
     margin-left: 20px;
-    font-weight: bold; 
-    
-    
+    font-weight: bold;
 }
 
 .dropdown {
@@ -49,8 +44,6 @@ header {
 .dropdown_menu {
     color: white;
     margin-top: -3px;
-
-    
     cursor: pointer;
 }
 
@@ -59,7 +52,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: 0px;
 }
@@ -68,7 +60,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -14px;
 }
@@ -77,7 +68,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -15px;
 }
@@ -86,7 +76,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -20px;
 }
@@ -97,7 +86,6 @@ header {
     font-size: 14px;
     padding-left: 10px;
     text-align: center;
-    
     padding: 10px;   
 }
 
@@ -131,77 +119,59 @@ header {
 
 
 .dropdown_menu a:hover {
-    
     color: rgb(91, 157, 219);
 }
 
 .dropdown:hover .dropdown_content1 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content2 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content3 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content4 {
-    
     display: block;
 }
 
 .dropdown_content1 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content2 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content3 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content4 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
-
-
-
-
-
 
 ul {
     display: inline-flex;
     margin-top: 20px;
     float: left;
-    
 }
 
 ul li {
     list-style: none;
-    
-    
 }
 
 ul li a {
     text-decoration: none;
     color: rgb(44, 46, 47);
     padding-right: 40px;
-    
 }
 
 ul li div img {
@@ -213,7 +183,6 @@ ul li div img {
 #personal {
     margin-top: -52px;
     margin-left: 900px;
-    
 }
 
 #header_container #personal .login {
@@ -234,7 +203,6 @@ ul li div img {
 #empty_box {
 	width:100%;
 	height:200px;
-	
 }
 
 #container {
@@ -244,11 +212,9 @@ ul li div img {
     height: 400px;
     z-index: 2;
     margin-top: -50px;
-    
 }
 
 #contents {
-    
     width: 1030px;
     z-index: 2;
 }
@@ -278,7 +244,6 @@ a {
 #tools img {
     margin-left: 550px;
     margin-top: 200px;
-    
     width: 400px;
 }
 
@@ -316,7 +281,6 @@ a {
     border-radius: 10%;
     background-color: rgb(115, 201, 228);
     box-shadow: 2px 2px 2px 2px gray;
-    
 }
 
 #tools_2 {
@@ -339,23 +303,12 @@ a {
     box-shadow: 2px 2px 2px 2px gray;
 }
 
-/* #tools_4 {
-    width: 200px;
-    height: 160px;    
-    border-radius: 10%;
-    margin-left: -20px;
-    margin-right: 20px;
-    background-color: rgb(216, 170, 70);
-    box-shadow: 2px 2px 2px 2px gray;
-} */
-
 #tools_1 p{
     margin-left: 46px;
     margin-top: 55px;
     font-size: 42px;
     font-weight: 900;
     color: rgb(85, 120, 172);
-
 }
 
 #tools_2 p{
@@ -374,14 +327,6 @@ a {
     color: rgb(5, 126, 110);
 }
 
-/* #tools_4 p{
-    margin-top: 34px;
-    font-size: 42px;
-    font-weight: 500;
-    text-align: center;
-    color: rgb(241, 233, 233);
-} */
-
 #tools_1:hover {
     box-shadow: 0px 0px 2px 2px gray;
 }
@@ -397,28 +342,20 @@ a {
 #copyright {
     width: 100%;
     height: 270px;
-    
     padding-top: -700px;
     color: rgb(80, 66, 66);
     background-color: rgba(219, 212, 201, 0.308);
-    
-    
 }
 
 #copyright_box {
     display: inline-flex;
     margin-left: 100px;
-    
-
 }
 
 #copyright_left {
-    
     margin-top: 10px;
     margin-left: -70px;
     width: 300px;
-   
-
 }
 
 #copyright_left #cs {
@@ -433,18 +370,14 @@ a {
     margin-left: 40px;
     width: 350px;
     line-height: 20px;
-    
 }
 
 #copyright_right1 {
-    
     margin-top: 10px;
     line-height: 40px;
-    
 }
 
 #copyright_right1 #ment {
-    
     width: 450px;
     margin-top: 25px;
 }
@@ -456,9 +389,7 @@ a {
 
 #snslogo {
     display: inline-flex;
-    
     margin-top: 12px;
-    
 }
 
 #snslogo img {
@@ -472,15 +403,12 @@ a {
     margin-left: 70px;
     width: 900px;
     border: 0.1px rgb(199, 170, 170) solid;
-    
 }
 
 #copyright_last {
     text-align: center;
     margin-top: 10px;
 }
-
-
 
 #kakao #kakao_logo {
     position: fixed;
@@ -493,7 +421,6 @@ a {
 }
 
 #up {
-    
     position: fixed;
     right: 150px;
     width: 50px;
@@ -501,8 +428,5 @@ a {
     border-radius: 50px;
     margin-left: 1700px;
     margin-top: 510px;
-    /* transform:rotate(-90deg); */
     border: rgb(75, 147, 184) 1px solid;
-    
-    
 }

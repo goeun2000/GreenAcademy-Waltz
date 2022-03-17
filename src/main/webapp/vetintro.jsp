@@ -19,7 +19,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
- <header>
+    <header>
         <nav id="header_container">
             <ul id="menubar">
                 <li>
@@ -75,78 +75,59 @@
             </ul>
             
 
-<c:catch>
-    <c:choose>
-        <c:when test="${empty authInfo }">
-        <ul id="personal">
-        
-            <li>
-                 <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
-             </li>
-             <li>
-                 <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
-             </li>
-         </ul>   
-        </c:when>
-        <c:otherwise>
-            <c:choose>
-            
-            
-                <c:when test="${authInfo.manager eq '1' }">
-                <ul id="personal" style="margin-left:780px; margin-top:-52px;">
-            
-		            <li style="font-size:13px; margin-right:20px; margin-top:2px;">
-		            	관리자 ${authInfo.name }
-		            </li>
-	            		<%-- <h5>관리자 ${authInfo.name }님, 환영합니다.</h5> --%>
-	                  
-	                 <li>
-	                       <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
-	                 </li>                    
-	                 <li>
-	                       <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
-	                 </li>
-	       
-	            </ul>
-                </c:when>
-                <c:otherwise>
-                <ul id="personal" style="margin-left:800px;">
-            
-			            <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
-			            	${authInfo.name }님
-			            </li>
+            <c:catch>
+                <c:choose>
+                    <c:when test="${empty authInfo }">
+                    <ul id="personal">
+                        <li>
+                             <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
+                         </li>
+                         <li>
+                             <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
+                         </li>
+                     </ul>
+                    </c:when>
+                    <c:otherwise>
+                        <c:choose>
+                            <c:when test="${authInfo.manager eq '1' }">
+                                <ul id="personal" style="margin-left:780px; margin-top:-52px;">
+                                    <li style="font-size:13px; margin-right:20px; margin-top:2px;">
+                                        관리자 ${authInfo.name }
+                                    </li>
+                                     <li>
+                                         <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
+                                     </li>
+                                     <li>
+                                         <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                     </li>
+                                </ul>
+                            </c:when>
+                            <c:otherwise>
+                                <ul id="personal" style="margin-left:800px;">
+                                    <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
+                                            ${authInfo.name }님
+                                    </li>
+                                    <li>
+                                        <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                    </li>
+                                    <li>
+                                        <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
+                                    </li>
+                                 </ul>
 
-                      <li>
-                          <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
-                      </li>
-                      <li>
-                           <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
-                      </li>
-                      
-                 </ul>     
-                      
-                </c:otherwise>
-            </c:choose>
-        </c:otherwise>
-    </c:choose>
-</c:catch>              
-                
-           
+                            </c:otherwise>
+                        </c:choose>
+                    </c:otherwise>
+                </c:choose>
+            </c:catch>
         </nav>
     </header>
     <div id="header_back">
     </div>
-
-    
-
-
-
-
     <section id="container">
         <div id="title">
             <p>전문의 소개</p>
         </div>
-
         <div id="vet_ment">
             <div>
                 <img src="resources/images/logo.png" alt="">
@@ -154,7 +135,6 @@
             <div>
                 <p>왈츠는<br>든든한 수의사들과<br>함께합니다.</p>
             </div>
-
         </div>
         <div id="vets">
             <div id="vet1">
@@ -164,9 +144,7 @@
                     
                     <p id="vet1_intro"> - 서울대학교 수의학과 졸업 <br>- 現 그린 동물병원 대표원장  
                         <br>- 現 한국동물병원협회 정회원 <br>- 現 미국 수의산과학협회 정회원  </p>
-
                 </div>
-                
             </div>
             <div id="vet2">
                 <img src="resources/images/woman.jpg" alt="">
@@ -174,7 +152,6 @@
                     <p id="vet1_name"> <span>박지현</span>  수의사 <input type="button" id="btn1" value="상담받기"></p>
                     <p id="vet2_intro"> - 건국대학교 수의학과 졸업 <br>- 現 희망 동물병원 대표원장  
                         <br>- 現 한국동물병원협회 정회원 <br>- 現 국제수의정형학회 정회원  </p>
-
                 </div>
             </div>
             <div id="vet3">
@@ -183,14 +160,9 @@
                     <p id="vet3_name"> <span>이호준</span>  수의사 <input type="button" id="btn1" value="상담받기"></p>
                     <p id="vet3_intro"> - 충북대학교 수의학과 졸업(박사과정) <br>- 前 도토리 동물병원 대표원장  
                         <br>- 現 마리동물의료센터 센터장 <br>- 現 세계수의내시경협회 정회원<br>- 現 미국 수의산장비뇨기과학협회 정회원  </p>
-
                 </div>
             </div>
-
         </div>
-
-        
-
         <div id="copyright">
             <div id="copyright_box">
                 <div id="copyright_left">
@@ -208,7 +180,6 @@
                             무단 복제, 모방 시 법적인 처벌을 받을 수 있습니다.
                         </p> 
                     </div>
-                
                     <div id="snslogo">
                         <a href="https://www.facebook.com"><img src="resources/images/facebook.png" alt=""></a>
                         <a href="https://www.instagram.com"><img src="resources/images/instagram.png" alt=""></a>
@@ -218,19 +189,14 @@
             </div>
         <hr id="copyright_line">
         <p id="copyright_last">Copyright (c) Waltz 2021, All Rights Reserved</p>
-        </div>    
-
+        </div>
     </section>
-
     <div id="kakao" >
         <img src="/resources/images/kakaoimage.png" id="kakao_logo" >
         <div>
             <img src="/resources/images/up2.png" style="cursor: pointer;" id="up" onclick="window.scrollTo(0,0);">
         </div>
-        
     </div>
-
-
     <script src="resources/js/vetintro.js" charset="UTF-8"></script>
 </body>
 </html>

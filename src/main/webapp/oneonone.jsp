@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+    <header>
         <nav id="header_container">
             <ul id="menubar">
                 <li>
@@ -73,65 +73,52 @@
             
             
   
-<c:catch>
-    <c:choose>
-        <c:when test="${empty authInfo }">
-        <ul id="personal">
-        
-            <li>
-                 <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
-             </li>
-             <li>
-                 <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
-             </li>
-         </ul>   
-        </c:when>
-        <c:otherwise>
-            <c:choose>
-            
-            
-                <c:when test="${authInfo.manager eq '1' }">
-                <ul id="personal" style="margin-left:780px; margin-top:-52px;">
-            
-		            <li style="font-size:13px; margin-right:20px; margin-top:2px;">
-		            	관리자 ${authInfo.name }
-		            </li>
-	            		<%-- <h5>관리자 ${authInfo.name }님, 환영합니다.</h5> --%>
-	                  
-	                 <li>
-	                       <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
-	                 </li>                    
-	                 <li>
-	                       <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
-	                 </li>
-	       
-	            </ul>
-                </c:when>
-                <c:otherwise>
-                <ul id="personal" style="margin-left:800px;">
-            
-			            <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
-			            	${authInfo.name }님
-			            </li>
+            <c:catch>
+                <c:choose>
+                    <c:when test="${empty authInfo }">
+                    <ul id="personal">
+                        <li>
+                             <a href="/login" style="font-size:13px;"><i class="fa fa-sign-in"></i> 로그인</a>
+                         </li>
+                         <li>
+                             <a href="/register/step1" style="font-size:13px;"><i class="fa fa-user"></i> 회원가입</a>
+                         </li>
+                     </ul>
+                    </c:when>
+                    <c:otherwise>
+                        <c:choose>
+                            <c:when test="${authInfo.manager eq '1' }">
+                                <ul id="personal" style="margin-left:780px; margin-top:-52px;">
+                                    <li style="font-size:13px; margin-right:20px; margin-top:2px;">
+                                        관리자 ${authInfo.name }
+                                    </li>
+                                     <li>
+                                         <a href="/list" style="font-size:13px;"><i class="fa fa-sign-out"></i> 회원목록</a>
+                                     </li>
+                                     <li>
+                                         <a href="/logout" style="font-size:13px;"><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                     </li>
+                                </ul>
+                            </c:when>
+                            <c:otherwise>
+                                <ul id="personal" style="margin-left:800px;">
+                                    <li style="font-size:13px; margin-right:30px; margin-top:2px;" >
+                                            ${authInfo.name }님
+                                    </li>
 
-                      <li>
-                          <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
-                      </li>
-                      <li>
-                           <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
-                      </li>
-                      
-                 </ul>     
-                      
-                </c:otherwise>
-            </c:choose>
-        </c:otherwise>
-    </c:choose>
-</c:catch>
-                
-                
-                
-            
+                                    <li>
+                                        <a href="/logout" style="font-size:13px; "><i class="fa fa-sign-out"></i> 로그아웃</a>
+                                    </li>
+                                    <li>
+                                        <a href="/myPost" style="font-size:13px;"> 마이페이지</a>
+                                    </li>
+                                 </ul>
+
+                            </c:otherwise>
+                        </c:choose>
+                    </c:otherwise>
+                </c:choose>
+            </c:catch>
         </nav>
     </header>
     <div id="header_back">
@@ -146,22 +133,12 @@
                 <input type="text" name="" id="email" placeholder="이메일을 입력하세요."> <br>
                 <textarea name="" id="contents" cols="130" rows="30" placeholder="내용을 입력하세요."value=""></textarea> <br>
                 <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onclick="loadFile(this)"  >
-
-                
                 <div id="buttons">
                     <input type="submit" value="확인" id="btn1">
                     <input type="reset" value="다시 작성" id="btn2">
                 </div>
-
-                
-                
             </form>
-
-
         </div>
-
-        
-
         <div id="copyright">
             <div id="copyright_box">
                 <div id="copyright_left">
@@ -179,7 +156,6 @@
                             무단 복제, 모방 시 법적인 처벌을 받을 수 있습니다.
                         </p> 
                     </div>
-                
                     <div id="snslogo">
                         <a href="https://www.facebook.com"><img src="resources/images/facebook.png" alt=""></a>
                         <a href="https://www.instagram.com"><img src="resources/images/instagram.png" alt=""></a>
@@ -189,8 +165,7 @@
             </div>
         <hr id="copyright_line">
         <p id="copyright_last">Copyright (c) Waltz 2021, All Rights Reserved</p>
-        </div>    
-
+        </div>
     </section>
 
     <div id="kakao">
@@ -198,7 +173,6 @@
         <div>
             <img src="resources/images/up2.png" style="cursor: pointer;" alt="" id="up" onclick="window.scrollTo(0,0);">
         </div>
-        
     </div>
 </body>
 </html>

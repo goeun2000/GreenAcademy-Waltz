@@ -21,7 +21,6 @@ header {
     padding-left: -10px;
     margin-left: 210px;
     width: 1050px;
-
 }
 
 #header_container ul {
@@ -35,8 +34,6 @@ header {
 
 #menubar {
     margin-left: 20px;
-    
-    
 }
 
 .dropdown {
@@ -46,7 +43,6 @@ header {
 .dropdown_menu {
     color: white;
     margin-top: -3px;
-    
     cursor: pointer;
 }
 
@@ -55,7 +51,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: 0px;
 }
@@ -64,7 +59,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -14px;
 }
@@ -73,7 +67,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -15px;
 }
@@ -82,7 +75,6 @@ header {
     position: absolute;
     background-color: white;
     border: rgba(253, 244, 244, 0.911) solid 1px;
-    
     display: none;
     margin-left: -20px;
 }
@@ -93,7 +85,6 @@ header {
     font-size: 14px;
     padding-left: 10px;
     text-align: center;
-    
     padding: 10px;   
 }
 
@@ -127,77 +118,59 @@ header {
 
 
 .dropdown_menu a:hover {
-    
     color: rgb(91, 157, 219);
 }
 
 .dropdown:hover .dropdown_content1 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content2 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content3 {
-    
     display: block;
 }
 
 .dropdown:hover .dropdown_content4 {
-    
     display: block;
 }
 
 .dropdown_content1 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content2 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content3 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
 
 .dropdown_content4 a:hover {
-    
     color: white;
     background-color: skyblue;
 }
-
-
-
-
-
 
 ul {
     display: inline-flex;
     margin-top: 20px;
     float: left;
-    
 }
 
 ul li {
     list-style: none;
-    
-    
 }
 
 ul li a {
     text-decoration: none;
     color: rgb(44, 46, 47);
     padding-right: 40px;
-    
 }
 
 ul li div img {
@@ -209,7 +182,6 @@ ul li div img {
 #personal {
     margin-top: -52px;
     margin-left: 900px;
-    
 }
 
 #header_container #personal .login {
@@ -217,8 +189,6 @@ ul li div img {
     font-size: 13px;
     z-index: 2;
 }
-
-
 
 #header_back {
     height: 50px;
@@ -231,11 +201,9 @@ ul li div img {
     height: 100%;
     z-index: 2;
     margin-top: -50px;
-    
 }
 
 #title {
-    
     color: rgb(44, 46, 47);
     font-size: 20px;
     font-weight: 600;
@@ -254,7 +222,6 @@ ul li div img {
     width: 100%;
     height: 500px;
     font-weight: 700;
-    
 }
 
  #login_box {
@@ -267,12 +234,10 @@ ul li div img {
     padding-left: 40px;
     padding-top: 80px;
     padding-bottom: 10px;
-    
 } 
 
 #idpwd {
     margin-left: 40px;
-    
 }
 
 #box1 {
@@ -292,7 +257,6 @@ ul li div img {
 #idsave {
     margin-top: 20px;
     margin-left: 90px;
-
 }
 
 #func_box {
@@ -300,7 +264,6 @@ ul li div img {
     margin-left: 50px;
     width: 500px;
     height: 100px;
-    
 }
 
 #btn1 {
@@ -333,13 +296,10 @@ ul li div img {
     font-size: 15px;
 }
 
-
 .panel-body {
 	width: 100%;
 	height: 500px;
-	
 }
-
 
 fieldset {
 	border:none;
@@ -373,41 +333,29 @@ fieldset {
 	width:120px;
 	height:40px;
 	cursor:pointer;
-	
 }
 
 #error {
 	margin-left:30px;
 }
 
-
-
-
-  #copyright {
+#copyright {
     width: 100%;
     height: 270px;
-    
     padding-top: -700px;
     color: rgb(80, 66, 66);
     background-color: rgba(219, 212, 201, 0.308);
-    
-    
 }
 
 #copyright_box {
     display: inline-flex;
     margin-left: 100px;
-    
-
 }
 
 #copyright_left {
-    
     margin-top: 10px;
     margin-left: -70px;
     width: 300px;
-   
-
 }
 
 #copyright_left #cs {
@@ -422,18 +370,14 @@ fieldset {
     margin-left: 40px;
     width: 350px;
     line-height: 20px;
-    
 }
 
 #copyright_right1 {
-    
     margin-top: 10px;
     line-height: 40px;
-    
 }
 
 #copyright_right1 #ment {
-    
     width: 450px;
     margin-top: 25px;
 }
@@ -442,12 +386,9 @@ fieldset {
     margin-left: 220px;
 }
 
-
 #snslogo {
     display: inline-flex;
-    
     margin-top: 12px;
-    
 }
 
 #snslogo img {
@@ -461,7 +402,6 @@ fieldset {
     margin-left: 70px;
     width: 900px;
     border: 0.1px rgb(199, 170, 170) solid;
-    
 }
 
 #copyright_last {
@@ -480,15 +420,11 @@ fieldset {
 }
 
 #up {
-    
     position: fixed;
     width: 50px;
     height: 50px;
     border-radius: 50px;
     margin-left: 1700px;
     margin-top: 430px;
-    /* transform:rotate(-90deg); */
     border: rgb(75, 147, 184) 1px solid;
-    
-    
 }
